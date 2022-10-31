@@ -6,7 +6,6 @@ use KaanTanis\FilamentPasswordConfirmation\Http\Livewire\Auth\PasswordConfirmati
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use KaanTanis\FilamentPasswordConfirmation\Commands\FilamentPasswordConfirmationCommand;
 
 class FilamentPasswordConfirmationServiceProvider extends PackageServiceProvider
 {

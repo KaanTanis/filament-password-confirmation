@@ -10,4 +10,3 @@ Route::domain(config('filament.domain'))
                 ->name('password.confirm');
         });
     });
-

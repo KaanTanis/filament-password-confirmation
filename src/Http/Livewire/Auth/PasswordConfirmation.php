@@ -2,6 +2,7 @@
 
 namespace KaanTanis\FilamentPasswordConfirmation\Http\Livewire\Auth;
 
+use DanHarrin\LivewireRateLimiting\WithRateLimiting;
 use Filament\Forms\ComponentContainer;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
@@ -11,7 +12,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use Livewire\Component;
-use DanHarrin\LivewireRateLimiting\WithRateLimiting;
 
 /**
  * @property ComponentContainer $form

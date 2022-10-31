@@ -3,8 +3,8 @@
 namespace KaanTanis\FilamentPasswordConfirmation\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use KaanTanis\FilamentPasswordConfirmation\FilamentPasswordConfirmationServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
