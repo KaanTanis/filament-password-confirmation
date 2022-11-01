@@ -52,7 +52,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Roadmap
 
-- [ ] Now working on post request. If user time is expired, the user will be redirected (or modal) to a password confirmation page.
+- [ ] Not working on post request. If user time is expired, the user will be redirected (or modal) to a password confirmation page.
 - [ ] Add more languages
 - [ ] Add more documentation
 - [ ] Get confirmation on critical actions even if the session doesn't expire
