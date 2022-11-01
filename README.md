@@ -1,7 +1,8 @@
 # Filament Password Confirmation
 
 ## Art
-![Art](https://raw.githubusercontent.com/KaanTanis/filament-password-confirmation/art/login-page.jpg)
+
+![Screenshot](https://raw.githubusercontent.com/KaanTanis/filament-password-confirmation/main/art/login-page.jpg)
 
 This package allows you to attach a middleware for password confirmation to your routes. 
 If user time is expired, the user will be redirected to a password confirmation page.
