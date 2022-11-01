@@ -2,5 +2,5 @@
 
 return [
     'confirm.password' => 'Parolayı Onayla',
-    'password.label' => 'Parola'
+    'password.label' => 'Parola',
 ];

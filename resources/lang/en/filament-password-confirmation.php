@@ -2,5 +2,5 @@
 
 return [
     'confirm.password' => 'Confirm Password',
-    'password.label' => 'Password'
+    'password.label' => 'Password',
 ];
