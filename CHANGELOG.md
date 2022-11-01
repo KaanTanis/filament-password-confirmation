@@ -1,3 +1,3 @@
 # Changelog
 
-All notable changes to `filament-password-confirmation` will be documented in this file.
+First stable release 01/11/2022 v1.0.0

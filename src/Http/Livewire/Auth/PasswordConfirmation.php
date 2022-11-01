@@ -47,7 +47,7 @@ class PasswordConfirmation extends Component implements HasForms
     {
         return [
             TextInput::make('password')
-                ->label('Password')
+                ->label(__('filament-password-confirmation::filament-password-confirmation.password.label'))
                 ->type('password')
                 ->required(),
         ];

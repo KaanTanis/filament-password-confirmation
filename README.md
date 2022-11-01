@@ -1,8 +1,12 @@
-# UNDER DEVELOPMENT - DO NOT USE
-
 # Filament Password Confirmation
 
+## Art
+![Art](https://raw.githubusercontent.com/KaanTanis/filament-password-confirmation/art/login-page.jpg)
+
 This package allows you to attach a middleware for password confirmation to your routes. 
+If user time is expired, the user will be redirected to a password confirmation page.
+
+This feature protects your routes if you have a long session time.
 
 ## Installation
 
@@ -29,35 +33,31 @@ php artisan vendor:publish --tag="filament-password-confirmation-views"
 Open your filament.php config file and add the middleware.
 ```php
 'middleware' => [
-    'base' => [
+    'auth' => [
         ...
-        \Illuminate\Auth\Middleware\RequirePassword::class,
+        \KaanTanis\FilamentPasswordConfirmation\Http\Middleware\PasswordConfirmationMiddleware::class
     ],
 ]
 ```
 
-## Testing
-
-```bash
-composer test
+Time out can be configured in the config file. Default is 10800 seconds.
+```php
+'password_confirmation_timeout' => 10800 // 3 hours
 ```
 
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
+## Roadmap
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
-## Credits
-
-- [KaanTanis](https://github.com/KaanTanis)
-- [All Contributors](../../contributors)
+- [ ] Now working on post request. If user time is expired, the user will be redirected (or modal) to a password confirmation page.
+- [ ] Add more languages
+- [ ] Add more documentation
+- [ ] Get confirmation on critical actions even if the session doesn't expire
+- [ ] Confirmation for specific resources and actions
+- [ ] Confirmation from modal
+- [ ] Auto redirect/open modal if session is expired
 
 ## License
 
