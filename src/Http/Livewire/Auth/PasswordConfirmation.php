@@ -21,17 +21,28 @@ class PasswordConfirmation extends Component implements HasForms
     use InteractsWithForms;
     use WithRateLimiting;
 
+    /**
+     * @var string
+     */
     public $password = '';
 
+    /**
+     * @return void
+     */
     public function mount()
     {
         $this->form->fill();
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function authenticate(Request $request)
     {
         $data = $this->form->getState();
 
+        /** @phpstan-ignore-next-line */ // @fixme
         if (! Hash::check($data['password'], $request->user()->password)) {
             throw ValidationException::withMessages([
                 'password' => __('The provided password does not match your current password.'),
@@ -43,6 +54,9 @@ class PasswordConfirmation extends Component implements HasForms
         return redirect()->intended();
     }
 
+    /**
+     * @return array
+     */
     protected function getFormSchema(): array
     {
         return [
@@ -53,6 +67,9 @@ class PasswordConfirmation extends Component implements HasForms
         ];
     }
 
+    /**
+     * @return View
+     */
     public function render(): View
     {
         return view('filament-password-confirmation::password-confirmation')

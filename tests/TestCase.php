@@ -4,6 +4,7 @@ namespace KaanTanis\FilamentPasswordConfirmation\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use KaanTanis\FilamentPasswordConfirmation\FilamentPasswordConfirmationServiceProvider;
+use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -21,6 +22,7 @@ class TestCase extends Orchestra
     {
         return [
             FilamentPasswordConfirmationServiceProvider::class,
+            LivewireServiceProvider::class
         ];
     }
 

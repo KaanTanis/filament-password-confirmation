@@ -4,7 +4,9 @@
     "keywords": [
         "KaanTanis",
         "laravel",
-        "filament-password-confirmation"
+        "filament-password-confirmation",
+        "filament",
+        "laravel-filament"
     ],
     "homepage": "https://github.com/kaantanis/filament-password-confirmation",
     "license": "MIT",
@@ -17,8 +19,10 @@
     ],
     "require": {
         "php": "^8.1",
-        "spatie/laravel-package-tools": "^1.13.0",
-        "illuminate/contracts": "^9.0"
+        "filament/filament": "^2.0",
+        "illuminate/contracts": "^9.0",
+        "livewire/livewire": "^2.10",
+        "spatie/laravel-package-tools": "^1.13.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -28,6 +32,7 @@
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
         "phpstan/extension-installer": "^1.1",
+        "pestphp/pest-plugin-livewire": "^1.0",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
         "phpunit/phpunit": "^9.5"

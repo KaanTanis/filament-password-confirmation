@@ -9,7 +9,7 @@ use Illuminate\Contracts\Routing\UrlGenerator;
 
 class PasswordConfirmationMiddleware extends RequirePassword
 {
-    public function __construct(ResponseFactory $responseFactory, UrlGenerator $urlGenerator, $passwordTimeout = null)
+    public function __construct(ResponseFactory $responseFactory, UrlGenerator $urlGenerator)
     {
         parent::__construct($responseFactory, $urlGenerator, config('filament-password-confirmation.timeout'));
     }
