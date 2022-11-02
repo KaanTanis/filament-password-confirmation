@@ -9,6 +9,8 @@ If user time is expired, the user will be redirected to a password confirmation 
 
 This feature protects your routes if you have a long session time.
 
+**Note:** Exdends via `Illuminate\Auth\Middleware\RequirePassword` middleware.
+
 ## Installation
 
 You can install the package via composer:
