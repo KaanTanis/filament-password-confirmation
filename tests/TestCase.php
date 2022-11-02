@@ -22,7 +22,7 @@ class TestCase extends Orchestra
     {
         return [
             FilamentPasswordConfirmationServiceProvider::class,
-            LivewireServiceProvider::class
+            LivewireServiceProvider::class,
         ];
     }
 

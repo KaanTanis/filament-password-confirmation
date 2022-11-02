@@ -35,7 +35,7 @@ class PasswordConfirmation extends Component implements HasForms
     }
 
     /**
-     * @param Request $request
+     * @param  Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function authenticate(Request $request)
