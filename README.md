@@ -43,7 +43,7 @@ Open your filament.php config file and add the middleware.
 
 Time out can be configured in the config file. Default is 10800 seconds.
 ```php
-'password_confirmation_timeout' => 10800 // 3 hours
+'timeout' => 10800 // 3 hours
 ```
 
 ## Changelog
