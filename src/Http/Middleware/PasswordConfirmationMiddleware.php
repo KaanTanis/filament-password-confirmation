@@ -18,4 +18,11 @@ class PasswordConfirmationMiddleware extends RequirePassword
     {
         return parent::handle($request, $next, 'filament.password.confirm', $passwordTimeoutSeconds);
     }
+
+    protected function shouldConfirmPassword($request, $passwordTimeoutSeconds = null): bool
+    {
+        $confirmedAt = time() - $request->session()->get('auth.filament_password_confirmed_at', 0);
+
+        return $confirmedAt > ($passwordTimeoutSeconds ?? $this->passwordTimeout);
+    }
 }

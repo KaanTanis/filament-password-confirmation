@@ -3,7 +3,9 @@
 namespace KaanTanis\FilamentPasswordConfirmation;
 
 use KaanTanis\FilamentPasswordConfirmation\Http\Livewire\Auth\PasswordConfirmation;
+use KaanTanis\FilamentPasswordConfirmation\Providers\EventServiceProvider;
 use Livewire\Livewire;
+use Spatie\LaravelPackageTools\Exceptions\InvalidPackage;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -24,10 +26,16 @@ class FilamentPasswordConfirmationServiceProvider extends PackageServiceProvider
             ->hasRoute('web');
     }
 
-    public function boot()
+    public function bootingPackage()
     {
-        parent::boot();
-
         Livewire::component('filament-password-confirmation::password-confirmation', PasswordConfirmation::class);
+    }
+
+    /**
+     * @throws
+     */
+    public function registeringPackage()
+    {
+        $this->app->register(EventServiceProvider::class);
     }
 }

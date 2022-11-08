@@ -49,7 +49,7 @@ class PasswordConfirmation extends Component implements HasForms
             ]);
         }
 
-        $request->session()->passwordConfirmed();
+        $this->put('auth.filament_password_confirmed_at', time());
 
         return redirect()->intended();
     }
