@@ -2,8 +2,6 @@
 
 namespace KaanTanis\FilamentPasswordConfirmation\Events;
 
-use Illuminate\Support\Facades\Log;
-
 class UserLoggedIn
 {
     public function __invoke(): void

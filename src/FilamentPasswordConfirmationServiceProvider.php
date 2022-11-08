@@ -5,7 +5,6 @@ namespace KaanTanis\FilamentPasswordConfirmation;
 use KaanTanis\FilamentPasswordConfirmation\Http\Livewire\Auth\PasswordConfirmation;
 use KaanTanis\FilamentPasswordConfirmation\Providers\EventServiceProvider;
 use Livewire\Livewire;
-use Spatie\LaravelPackageTools\Exceptions\InvalidPackage;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
