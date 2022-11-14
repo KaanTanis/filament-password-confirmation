@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.3 - 2022-11-14
+
+Fixed: if the user is not logged in, the confirm page redirects to the login page
+
 ## v1.0.2 - 2022-11-13
 
 Session fixed
