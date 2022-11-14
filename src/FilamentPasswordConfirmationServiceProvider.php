@@ -10,6 +10,10 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FilamentPasswordConfirmationServiceProvider extends PackageServiceProvider
 {
+    /**
+     * @param  Package  $package
+     * @return void
+     */
     public function configurePackage(Package $package): void
     {
         /*
@@ -25,15 +29,18 @@ class FilamentPasswordConfirmationServiceProvider extends PackageServiceProvider
             ->hasRoute('web');
     }
 
-    public function bootingPackage()
+    /**
+     * @return void
+     */
+    public function bootingPackage(): void
     {
         Livewire::component('filament-password-confirmation::password-confirmation', PasswordConfirmation::class);
     }
 
     /**
-     * @throws
+     * @return void
      */
-    public function registeringPackage()
+    public function registeringPackage(): void
     {
         $this->app->register(EventServiceProvider::class);
     }
