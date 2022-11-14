@@ -3,6 +3,7 @@
 namespace KaanTanis\FilamentPasswordConfirmation\Http\Livewire\Auth;
 
 use DanHarrin\LivewireRateLimiting\WithRateLimiting;
+use Filament\Facades\Filament;
 use Filament\Forms\ComponentContainer;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Concerns\InteractsWithForms;
@@ -26,11 +27,12 @@ class PasswordConfirmation extends Component implements HasForms
      */
     public $password = '';
 
-    /**
-     * @return void
-     */
     public function mount()
     {
+        if (! Filament::auth()->check()) {
+            return redirect()->route('filament.auth.login');
+        }
+
         $this->form->fill();
     }
 
